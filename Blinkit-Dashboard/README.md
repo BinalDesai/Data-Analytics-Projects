@@ -46,6 +46,7 @@ It includes fields like:
 - **Outlet Establishment Year vs. Sales**
 
   ![Dashboard Preview](https://github.com/BinalDesai/Blinkit-Dashboard/blinkit_dashboard_overview.png)
+  ![Dashboard Preview](blinkit_dashboard.png)
 
 
 
