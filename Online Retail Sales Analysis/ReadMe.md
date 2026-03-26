@@ -9,10 +9,21 @@ The goal is to explore patterns in sales, product performance, and customer beha
 
 ## 📊 Data Sources
 
-- **Primary Dataset:** Retail sales data (Azure SQL Database)  
-- **Secondary Dataset:** World Bank GDP per capita data  
+### 🔹 Primary Dataset (Azure SQL Database)
+The primary dataset was sourced from a cloud-hosted Azure SQL database provided as part of a training project.
+
+- Connected securely using Power BI  
+- Extracted sales, product, and invoice data for analysis  
+
+> 🔒 Note: Connection credentials and access details are not included for security reasons.
+
+---
+
+### 🌐 Secondary Dataset
+- **World Bank – GDP per Capita**
   👉 https://data.worldbank.org/indicator/NY.GDP.PCAP.CD  
 
+Used to enrich the analysis and compare economic indicators with sales performance across countries.
 ---
 
 ## 📊 Key Business Questions
