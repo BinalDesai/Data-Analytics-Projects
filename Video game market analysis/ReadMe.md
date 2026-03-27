@@ -1,195 +1,255 @@
 <h1 style="color:#2E86C1;">Video Game Market Analysis (SQL Project)</h1>
 
 <h2 style="color:#1F618D;">Objective</h2>
-This project analyzes video game sales, revenue, and user engagement using SQL to uncover insights about game performance, genres, publishers, and customer behavior.
+This project analyzes video game sales, revenue, engagement, and customer reviews to uncover patterns in game performance, genres, publishers, and yearly trends.
 
-The aim is to support data-driven decision-making by identifying key revenue drivers, engagement patterns, and market trends in the gaming industry.
+The goal is to support data-driven decision-making by identifying key revenue drivers, engagement behavior, and market opportunities in the gaming industry.
 
 ---
 
 <h2 style="color:#1F618D;">Dataset</h2>
 
-The dataset used in this project is included in this repository:
+📁 Dataset Folder: [View Dataset](./dataset)
 
-📁 Folder: `dataset/`
+- games_description.csv → Game details (name, genre, publisher, year)  
+- games_revenue.csv → Revenue data (purchases, pricing)  
+- games_reviews.csv → Reviews and engagement  
 
-- `games_description.csv` → Game details  
-- `games_revenue.csv` → Revenue data  
-- `games_reviews.csv` → Reviews and engagement  
-
-<i>Note: The dataset was structured and imported into a SQL environment for analysis.</i>
+<i>Note: Data was imported into a SQL environment and joined using game_id.</i>
 
 ---
 
-<h2 style="color:#1F618D;">Data Workflow</h2>
+<h2 style="color:#1F618D;">Data Processing</h2>
 
-- Imported CSV files into SQL database  
-- Created relationships using game_id  
-- Joined multiple tables for analysis  
-- Calculated key metrics such as revenue, engagement, and review percentages  
+<b>Join Method</b>  
+- INNER JOIN used across all three datasets on game_id  
+
+<b>Rationale</b>  
+- Ensures only complete records are included  
+- Maintains consistency across revenue, reviews, and engagement data  
 
 ---
 
 <h2 style="color:#1F618D;">Key Business Questions</h2>
 
-- Which games generate the highest revenue?  
-- Which genres contribute the most to total revenue?  
-- Which year generated the highest revenue?  
-- Do high-revenue games also have high engagement?  
-- Which publishers dominate the market?  
-- How do reviews and user engagement vary across games and genres?  
+- Which games and genres generate the most revenue and engagement?  
+- Is there a relationship between revenue and player engagement?  
+- What percentage of users leave reviews?  
+- Who are the top publishers by revenue?  
+- Which genres receive the most engagement?  
+- Are newer games performing better than older ones?  
 
 ---
 
-<h2 style="color:#1F618D;">Key Analysis and Results</h2>
+<h2 style="color:#1F618D;">Analysis and Insights</h2>
 
 <h3 style="color:#566573;">1. Revenue Analysis</h3>
 
 <b>Key Insights</b>  
-- Total revenue calculated as Number_of_Purchases × Unit_Price  
-- Revenue is concentrated among a few top-performing games  
-- Top 5 games contribute a large share of total revenue  
+- Top Games:
+  - Counter → 407M  
+  - PUBG: B → 105M  
+  - Dota 2 → 91M  
+
+- Top Genres:
+  - Action → 1.25B  
+  - Simulation → 184M  
+  - Role-Playing → 73M  
+
+- Highest Revenue Year:
+  - 2012 → 427M  
 
 <b>Analysis</b>  
-- The market follows a hit-driven model where a small number of games generate most of the revenue  
-- Identifying high-performing titles is critical for profitability  
+- Revenue is highly concentrated in top games  
+- Action genre dominates the market  
+- Industry follows a hit-driven model  
 
 ---
 
-<h3 style="color:#566573;">2. Genre Performance</h3>
+<h3 style="color:#566573;">2. Review Percentage</h3>
 
 <b>Key Insights</b>  
-- Top 3 genres dominate overall revenue  
-- Some genres consistently outperform others  
+- High Engagement:
+  - Counter, PUBG: B, Dota 2 → 71.43%  
+
+- Moderate:
+  - Among Us, Apex Legends → 66.67%  
+
+- Low:
+  - 69 Ball, Ale & T → 33.33%  
 
 <b>Analysis</b>  
-- Genre selection plays a key role in revenue generation  
-- Lower-performing genres indicate opportunities for improvement or repositioning  
+- Popular games receive higher engagement  
+- Smaller games struggle to attract reviews  
 
 ---
 
-<h3 style="color:#566573;">3. Yearly Trends</h3>
+<h3 style="color:#566573;">3. English Review Analysis</h3>
 
 <b>Key Insights</b>  
-- Certain years generate significantly higher revenue  
-- Revenue depends heavily on major game releases  
+- High English Reviews:
+  - All-In → 91.26%  
+  - Titanfa → 89.83%  
+
+- Moderate:
+  - Among Us → 67%  
+
+- Low:
+  - PUBG: B → 17%  
+  - Counter → 27%  
 
 <b>Analysis</b>  
-- The industry is influenced by blockbuster launches rather than steady yearly growth  
-- Strategic release timing is important for maximizing revenue  
+- Some games have global audiences  
+- Localization is important for growth  
 
 ---
 
-<h3 style="color:#566573;">4. Review and Engagement Analysis</h3>
+<h3 style="color:#566573;">4. Publisher Analysis</h3>
 
-<b>Key Insights</b>  
-- Review percentage varies significantly across games  
-- Some high-revenue games show lower engagement  
+<b>Top Publishers</b>  
+- Valve → 604M  
+- KRAFTON → 105M  
+- Rocksta → 57M  
 
 <b>Analysis</b>  
-- Revenue and engagement are not always directly correlated  
-- Indicates the importance of player experience and retention  
+- Revenue dominated by a few publishers  
+- Strong opportunity for partnerships and benchmarking  
 
 ---
 
-<h3 style="color:#566573;">5. Helpful vs Funny Reviews</h3>
+<h3 style="color:#566573;">5. Engagement Ratios</h3>
 
 <b>Key Insights</b>  
-- Calculated helpful and funny review percentages  
-- Identified highest and lowest performing games and genres  
+- Most Helpful Game → Terrari (370%)  
+- Least Helpful → All In (0%)  
+- Most Funny → Tom Cla (100%)  
+
+<b>Genre Insights</b>  
+- Highest Helpful → Action (74.61%)  
+- Lowest Helpful → Sports & Racing (18.11%)  
+- Most Funny → Role-Playing (84.58%)  
 
 <b>Analysis</b>  
-- Engagement quality varies across different types of games  
-- Certain genres attract more meaningful interaction from users  
+- Engagement quality varies across genres  
+- Community interaction is strong for certain game types  
 
 ---
 
 <h3 style="color:#566573;">6. Ranking Analysis</h3>
 
-<b>Key Insights</b>  
-- Games ranked within each genre based on revenue and reviews  
+<b>Approach</b>  
+- Used RANK() to rank games by:
+  - Revenue within genre  
+  - Reviews within genre  
 
 <b>Analysis</b>  
-- Top games dominate their respective genres  
-- Ranking helps identify competitive positioning within categories  
+- Top games dominate within categories  
+- Some games rank high in engagement but not revenue  
 
 ---
 
 <h3 style="color:#566573;">7. Revenue vs Engagement</h3>
 
 <b>Key Insights</b>  
-- Compared revenue with hours played  
-- Calculated average hours per purchase  
+- High Revenue + High Engagement:
+  - Counter, PUBG: B (~11 hours per purchase)  
+
+- Lower Engagement:
+  - Among Us, Unturned (4–7 hours)  
 
 <b>Analysis</b>  
-- High revenue does not always indicate high engagement  
-- Some games achieve strong sales but lower player retention  
+- Revenue does not guarantee engagement  
+- Retention varies across games  
 
 ---
 
-<h3 style="color:#566573;">8. Publisher Insights</h3>
+<h3 style="color:#566573;">8. Genre Engagement</h3>
 
 <b>Key Insights</b>  
-- Identified top publishers by revenue  
-- Measured publisher diversity across genres  
+- Action → 475K reviews/game  
+- Role-Playing → 155K  
+- Simulation → 124K  
+- Sports & Racing → 10K  
 
 <b>Analysis</b>  
-- Some publishers dominate multiple genres  
-- Others specialize in niche categories  
+- Popular genres attract significantly more engagement  
+
+---
+
+<h3 style="color:#566573;">9. Publisher Diversity</h3>
+
+<b>Key Insights</b>  
+- SEGA → 6 genres  
+- Electro, Xbox → 4 genres  
+- Others → 1–2 genres  
+
+<b>Analysis</b>  
+- Large publishers diversify  
+- Smaller publishers specialize  
+
+---
+
+<h3 style="color:#566573;">10. Yearly Trends</h3>
+
+<b>Key Insights</b>  
+- 2004–2006 → Low revenue (3M–33M)  
+- 2012 → Peak (427M, 9.1M reviews)  
+- 2024 → Growth continues  
+
+<b>Analysis</b>  
+- Market is growing over time  
+- Newer games perform better  
 
 ---
 
 <h2 style="color:#1F618D;">SQL Techniques Used</h2>
 
-- Joins (INNER JOIN across multiple tables)  
+- INNER JOIN  
 - Aggregations (SUM, AVG, COUNT)  
-- Window Functions (RANK with PARTITION BY)  
-- Calculated metrics (Revenue, Percentages)  
-- Subqueries and UNION operations  
+- Window Functions (RANK)  
+- Calculated metrics  
+- Subqueries and UNION  
 
 ---
 
 <h2 style="color:#1F618D;">Project Files</h2>
 
-- sql_queries.sql → SQL queries used for analysis  
-- games_description.csv → Game metadata  
-- games_revenue.csv → Revenue data  
-- games_reviews.csv → Reviews and engagement  
-- Video game Market Analysis.pdf → Detailed analysis report  
-
----
-
-<h2 style="color:#1F618D;">Tools and Technologies</h2>
-
-- SQL (Relational Database)  
-- Excel (Data preparation)  
+- dataset/ → All CSV files  
+- sql_queries.sql → SQL queries  
+- Video game Market Analysis.pdf → Full report  
 
 ---
 
 <h2 style="color:#1F618D;">Business Impact</h2>
 
-- Identifies top-performing games and genres  
-- Supports pricing and revenue optimization strategies  
-- Provides insights into player engagement behavior  
-- Helps publishers make data-driven decisions  
+- Identifies high-performing games and genres  
+- Supports pricing and marketing strategies  
+- Improves understanding of player engagement  
+- Helps publishers make strategic decisions  
 
 ---
 
-<h2 style="color:#1F618D;">Key Learnings</h2>
+<h2 style="color:#1F618D;">Recommendations</h2>
 
-- Writing efficient SQL queries for analysis  
-- Combining multiple datasets using joins  
-- Applying window functions for ranking  
-- Translating raw data into actionable insights  
-
----
-
-<h2 style="color:#1F618D;">Future Improvements</h2>
-
-- Build dashboards using Power BI or Tableau  
-- Add predictive models for revenue forecasting  
-- Perform deeper customer and player segmentation  
+- Focus on high-performing genres (Action, Simulation, RPG)  
+- Improve review collection for low-engagement games  
+- Expand localization for global markets  
+- Partner with top publishers  
+- Enhance community engagement features  
+- Monitor new releases closely  
+- Encourage genre diversification  
 
 ---
 
-This project demonstrates an end-to-end data analysis workflow using SQL to extract insights from a structured gaming dataset.
+<h2 style="color:#1F618D;">Limitations</h2>
+
+- Engagement ratios may exceed 100% due to multiple votes per review  
+- Some player interactions may not be captured  
+
+---
+
+<h2 style="color:#1F618D;">Conclusion</h2>
+
+The analysis shows that the gaming industry is driven by top-performing titles, strong genres, and increasing player engagement over time. While revenue and engagement are related, they are not always directly correlated. 
+
+These insights can guide better decision-making in game development, marketing, and portfolio strategy.
