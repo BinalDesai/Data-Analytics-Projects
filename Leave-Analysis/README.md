@@ -1,8 +1,5 @@
-# Leave-Analysis-for-Payhero-workforce-management-platfrom
-<h1 style="color:#2E86C1;">Leave Analysis Data Engineering Exercise</h1>
 
-## Candidate  
-**Binal Desai**
+<h1 style="color:#2E86C1;">Leave Analysis Data Engineering Exercise</h1>
 
 ---
 
