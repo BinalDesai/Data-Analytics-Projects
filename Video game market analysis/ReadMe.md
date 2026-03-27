@@ -9,11 +9,15 @@ The aim is to support data-driven decision-making by identifying key revenue dri
 
 <h2 style="color:#1F618D;">Dataset</h2>
 
-- games_description.csv → Game details (name, genre, publisher, release year)  
-- games_revenue.csv → Revenue data (number of purchases, unit price)  
-- games_reviews.csv → Reviews and engagement (reviews, helpful/funny tags, hours played)  
+The dataset used in this project is included in this repository:
 
-<i>Note: Data was imported into a SQL environment and structured using relational tables.</i>
+📁 Folder: `dataset/`
+
+- `games_description.csv` → Game details  
+- `games_revenue.csv` → Revenue data  
+- `games_reviews.csv` → Reviews and engagement  
+
+<i>Note: The dataset was structured and imported into a SQL environment for analysis.</i>
 
 ---
 
