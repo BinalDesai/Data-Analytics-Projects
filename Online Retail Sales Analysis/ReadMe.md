@@ -67,6 +67,8 @@ Used to enrich the analysis and compare economic indicators with sales performan
 - Non-seasonal items (mugs, candles) show **consistent year-round demand**  
 - Low-performing products may benefit from **bundling or promotions**
 
+<img src="Images/Sales_by_Category.png" width="500"/>
+
 ---
 
 ### 🌍 3. Customer & Regional Analysis
