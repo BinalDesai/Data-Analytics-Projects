@@ -7,6 +7,22 @@ The goal is to explore patterns in sales, product performance, and customer beha
 
 ---
 
+## 📊 Overall Sales Performance
+
+<img src="Images/Overall_sales_performance.png" width="800"/>
+
+### 🔹 Key Metrics  
+- **Total Revenue:** $1.93M  
+- **Year-to-Date Sales:** $430K  
+- **Previous YTD Sales:** $460K  
+- **Growth Rate:** -6.51%  
+
+### 📌 Insights  
+- Strong overall revenue driven by a few high-performing categories  
+- Sales are heavily concentrated in the **United Kingdom**  
+- Noticeable **seasonal fluctuations** across months  
+- Slight decline in YoY performance indicates need for optimization strategies  
+
 ## 📊 Data Sources
 
 ### 🔹 Primary Dataset (Azure SQL Database)
